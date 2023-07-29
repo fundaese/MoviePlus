@@ -1,5 +1,4 @@
 # MoviePlus
- MoviePlus
  
  MoviesFragment & MovieWatchedFragment
  
