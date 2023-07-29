@@ -9,11 +9,23 @@
         android:name="com.example.movieplus.ui.movies.MoviesFragment"
         android:label="MoviesFragment" >
         <action
-            android:id="@+id/action_moviesFragment_to_movieWatchedFragment"
-            app:destination="@id/movieWatchedFragment" />
+            android:id="@+id/action_moviesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieWatchedFragment"
-        android:name="com.example.movieplus.ui.moviewatched.MovieWatchedFragment"
-        android:label="MovieWatchedFragment" />
+        android:name="com.example.movieplus.ui.movies.MovieWatchedFragment"
+        android:label="MovieWatchedFragment">
+        <action
+            android:id="@+id/action_movieWatchedFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.movieplus.ui.movies.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="movie"
+            app:argType="com.example.movieplus.data.model.Movie" />
+    </fragment>
 </navigation>

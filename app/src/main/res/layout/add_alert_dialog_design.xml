@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/pink"
+    android:background="@color/red3"
     android:padding="24dp">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_save_type"
+        android:id="@+id/til_category"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
@@ -19,10 +19,10 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <AutoCompleteTextView
-            android:id="@+id/act_save_type"
+            android:id="@+id/act_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Save To"
+            android:hint="Category"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -30,8 +30,9 @@
         android:id="@+id/btn_cancel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:background="@color/pink"
+        android:backgroundTint="@color/dark_pink"
+        android:text="@string/btn_cancel"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btn_add"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintHorizontal_bias="0.5"
@@ -43,8 +44,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:background="@color/blue"
-        android:text="Add"
+        android:backgroundTint="@color/blue"
+        android:text="@string/btn_add"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -56,21 +58,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:hint="Title"
-        app:layout_constraintBottom_toTopOf="@+id/til_save_type"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/title"
+        app:layout_constraintBottom_toTopOf="@id/et_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/til_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/iv_movie_detail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/et_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/ic_add_photo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

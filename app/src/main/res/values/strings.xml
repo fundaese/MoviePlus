@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MoviePlus</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_add">Add</string>
+    <string name="title">Movie Title</string>
+    <string name="description">Movie Description</string>
 </resources>
